@@ -36,6 +36,9 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  if(response.data.weather[0].main === "Rain") {
+    document.getElementById("body").style.backgroundImage = url('../images/rain.png');
+  } 
 }
 
 function searchCity(city) {
